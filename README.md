@@ -1,2 +1,5 @@
 # vim-config
-My vim config
+
+```
+make setup
+```
