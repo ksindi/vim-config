@@ -6,14 +6,12 @@ syntax on
 set encoding=utf-8
 
 if $TERM_PROGRAM =~ "iTerm"
-    set termguicolors
     let g:onedark_termcolors=16
-    colorscheme cobalt2
+    colorscheme onedark
 elseif $TERM =~ "xterm-256color"
     "for Ubuntu
-    set termguicolors
     let g:onedark_termcolors=24
-    colorscheme cobalt2
+    colorscheme onedark
 endif
 
 let g:lightline = {
@@ -35,6 +33,11 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'joshdick/onedark.vim'
 Plugin 'itchyny/lightline.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 call vundle#end()
 filetype plugin indent on
@@ -144,5 +147,4 @@ au BufNewFile,BufRead *.py
 
 "json settings
 au BufNewFile,BufRead *.json set filetype=json
-
 au BufNewFile,BufRead *.md set filetype=markdown
